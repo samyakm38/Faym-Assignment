@@ -221,9 +221,6 @@ app/
 │
 ├── db/
 │
-├── jobs/
-│   └── advance_payout_processor.py
-│
 ├── exceptions/
 │
 ├── main.py
