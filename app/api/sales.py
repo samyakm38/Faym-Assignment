@@ -64,3 +64,16 @@ def approve_sale(
 
     sale = service.approve_sale(sale_id)
     return sale
+
+
+@router.post(
+    "/{sale_id}/reject",
+    response_model=SaleResponse,
+)
+def reject_sale(
+    sale_id: int,
+    db: Session = Depends(get_db),
+):
+    service = SaleService(db)
+    sale = service.reject_sale(sale_id)
+    return sale
